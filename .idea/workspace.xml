@@ -5,24 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3827d6da-47a8-4927-858c-0ef7e5024e4d" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/spift/AggFunc.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/spift/Balancing.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/spift/ComplexAcc.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/spift/ComputeVector.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/spift/DataStreamJob.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/spift/ImageUpdate.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/spift/Triple.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/spift/spift.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/org/spift/cleanup.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/org/spift/package.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/spift/AggFunc.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/spift/Balancing.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/spift/ComplexAcc.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/spift/ComputeVector.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/org/spift/ComputeVector.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/spift/DataStreamJob.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/org/spift/DataStreamJob.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/spift/ImageUpdate.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/org/spift/ImageUpdate.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/spift/spift.scala" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +25,13 @@
     <option name="done" value="true" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="CPU" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="SOFT" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -59,7 +57,8 @@
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -78,7 +77,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1679517540325</updated>
-      <workItem from="1679517541684" duration="987000" />
+      <workItem from="1679517541684" duration="1665000" />
     </task>
     <servers />
   </component>
@@ -90,7 +89,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="GPU" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
