@@ -18,7 +18,9 @@
 
 package org.spift
 
+import org.apache.commons.math3.complex.Complex
 import org.apache.flink.streaming.api.scala._
+
 
 /**
  * Skeleton for a Flink DataStream Job.
@@ -37,23 +39,46 @@ object DataStreamJob {
     // Sets up the execution environment, which is the main entry point
     // to building Flink applications.
     val env = StreamExecutionEnvironment.getExecutionEnvironment
-    val path = "/opt/astrodata/astrodata" + N.toString + "-100k.txt"
+    env.setParallelism(16)
+    val path = "/opt/astrodata" + N.toString + "-100k.txt"
+    //    val path = "/opt/lena-512.txt"
     val src: DataStream[String] = env.readTextFile(path)
 
-    val res = src
+    //    val sink = FileSink
+    //      .forRowFormat(
+    //        new Path("/opt/res"),
+    //        new SimpleStringEncoder[List[(Double, Double)]]("UTF-8"))
+    //      .withRollingPolicy(
+    //        DefaultRollingPolicy.builder()
+    //          .build())
+    //      .withOutputFileConfig(
+    //        OutputFileConfig.builder()
+    //          .withPartPrefix("spift")
+    //          .withPartSuffix(".txt")
+    //          .build()
+    //      )
+    //      .build()
+
+    src
       .map(s => {
         val arr = s.split(",")
-        Triple(arr(0).toInt, arr(1).toInt, List(arr(2).toDouble, arr(3).toDouble))
+        Triple(arr(0).toInt, arr(1).toInt, new Complex(arr(2).toDouble, arr(3).toDouble))
       })
       .map(s => {
         val isCS = isColumnShift(s)
-        val p = shiftIndex(s, isCS)
-        (s, isCS, p)
+        val shiftIdx = shiftIndex(s, isCS)
+        (s, (isCS, shiftIdx))
       })
-      .map(new ComputeVector)
-      .map(new ImageUpdate)
+      .keyBy(_._2)
+      .flatMap(new ComputeMatrix)
+      .flatMap(new cleanup)
+      .setParallelism(1)
+    //      .sinkTo(sink)
+    //      .setParallelism(1)
 
     // Execute program, beginning computation.
     env.execute("Flink Scala API Skeleton")
+
+    System.setProperty("java.io.tmpdir", "/tmp")
   }
 }
