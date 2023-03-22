@@ -18,10 +18,6 @@
 
 package org.spift
 
-//import org.apache.flink.api.common.serialization.SimpleStringEncoder
-//import org.apache.flink.core.fs.Path
-//import org.apache.flink.streaming.api.functions.sink.filesystem.{OutputFileConfig, StreamingFileSink}
-//import org.apache.flink.streaming.api.functions.sink.filesystem.rollingpolicies.DefaultRollingPolicy
 import org.apache.flink.streaming.api.scala._
 
 /**
@@ -41,44 +37,22 @@ object DataStreamJob {
     // Sets up the execution environment, which is the main entry point
     // to building Flink applications.
     val env = StreamExecutionEnvironment.getExecutionEnvironment
-    val path = "/opt/astrodata" + N.toString + "-100.txt"
+    val path = "/opt/astrodata/astrodata" + N.toString + "-100k.txt"
     val src: DataStream[String] = env.readTextFile(path)
-
-//    val sink = StreamingFileSink.forRowFormat(
-//      new Path("/opt/res"),
-//      new SimpleStringEncoder[(Int, List[List[Complex]])]("UTF-8"))
-//      .withRollingPolicy(
-//        DefaultRollingPolicy.builder()
-//          .withInactivityInterval(Duration.ofSeconds(5))
-//          .build())
-//      .withOutputFileConfig(
-//        OutputFileConfig.builder()
-//          .withPartPrefix("spift")
-//          .withPartSuffix(".txt")
-//          .build()
-//      )
-//      .build()
 
     val res = src
       .map(s => {
-      val arr = s.split(",")
-      Triple(arr(0).toInt, arr(1).toInt, List(arr(2).toDouble, arr(3).toDouble))
-    })
+        val arr = s.split(",")
+        Triple(arr(0).toInt, arr(1).toInt, List(arr(2).toDouble, arr(3).toDouble))
+      })
       .map(s => {
-      val isCS = isColumnShift(s)
-      val p = shiftIndex(s, isCS)
-      (s, isCS, p)
-    })
-      .flatMap(e => keysGen(d, e))
-      .keyBy(_._1)
+        val isCS = isColumnShift(s)
+        val p = shiftIndex(s, isCS)
+        (s, isCS, p)
+      })
       .map(new ComputeVector)
-      .setParallelism(d)
-      .keyBy(_._1)
-      .flatMap(new ImageUpdate)
-      .setParallelism(d)
+      .map(new ImageUpdate)
 
-//    res.addSink(sink)
-//      .setParallelism(d)
     // Execute program, beginning computation.
     env.execute("Flink Scala API Skeleton")
   }

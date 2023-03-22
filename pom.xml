@@ -106,7 +106,12 @@ under the License.
 			<version>${log4j.version}</version>
 			<scope>runtime</scope>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>org.jcuda</groupId>
+            <artifactId>jcuda</artifactId>
+            <version>10.1.0</version>
+        </dependency>
+    </dependencies>
 
 	<build>
 		<plugins>

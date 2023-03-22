@@ -6,15 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="3827d6da-47a8-4927-858c-0ef7e5024e4d" name="变更" comment="">
       <change afterPath="$PROJECT_DIR$/src/main/scala/org/spift/cleanup.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/spift/package.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/org/spift/AggFunc.scala" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/org/spift/Balancing.scala" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/org/spift/ComplexAcc.scala" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/org/spift/ComputeVector.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/org/spift/ComputeVector.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/org/spift/DataStreamJob.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/org/spift/DataStreamJob.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/org/spift/ImageUpdate.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/org/spift/ImageUpdate.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/org/spift/spift.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/spift/package.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/org/spift/package.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,20 +47,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/spift/src/main/scala/org/spift",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/spift/src/main/scala/org/spift&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\spift\src\main\scala\org\spift" />
